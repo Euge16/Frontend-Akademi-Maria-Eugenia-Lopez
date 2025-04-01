@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Notbook Gamer",
+            "category": "notbook",
+            "price": 2200000,
+            "stock": 10,
+            "description": "soy notbook"
+            
+        },
+        {
+            "id": 2,
+            "name": "Samsung A54",
+            "category": "celular",
+            "price": 900000,
+            "stock": 20,
+            "description": "soy un celu"
+        }
+    ]
+}
+  
