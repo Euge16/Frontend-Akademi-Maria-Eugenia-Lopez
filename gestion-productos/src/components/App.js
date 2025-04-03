@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
+import './App.css';
+import ProductList from './ProductList';
 // Prueba para mostrar mis productos
-function App() {
+/* function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -22,7 +23,16 @@ function App() {
       </ul>
     </div>
   );
-}
+} */
+
+const App = () => {
+  return (
+    <div className='app-container'>
+      <ProductList />
+    </div>
+    
+  );
+};
 
 export default App;
 
