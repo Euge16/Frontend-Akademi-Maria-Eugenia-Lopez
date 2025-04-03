@@ -2,20 +2,49 @@
     "products": [
         {
             "id": 1,
-            "name": "Notbook Gamer",
-            "category": "notbook",
-            "price": 2200000,
+            "name": "ABRIGO CRUZADO MEZCLA LANA",
+            "category": "Abrigos",
+            "price": 449990.00,
             "stock": 10,
-            "description": "soy notbook"
+            "description": "Abrigo entallado confeccionado en hilatura con mezcla de lana. Cuello solapa de muescas y manga larga acabada en abertura y botones. Bolsillos con solapa en delantero. Forro interior. Cierre frontal cruzado con botones.",
+            "image_url": "https://static.zara.net/assets/public/ff62/ea80/47d946e49642/872dfb77e44e/02091724621-000-e1/02091724621-000-e1.jpg?ts=1741780970901&w=750"
             
         },
         {
             "id": 2,
-            "name": "Samsung A54",
-            "category": "celular",
-            "price": 900000,
+            "name": "CHALECO BOTONES",
+            "category": "Blazers",
+            "price": 99990.00,
             "stock": 20,
-            "description": "soy un celu"
+            "description": "Chaleco de escote pico y manga sisa. Cierre frontal con botones.",
+            "image_url": "https://static.zara.net/assets/public/9381/1969/cf0d4d7dbbd4/9a6b9b7e4244/03736991481-e1/03736991481-e1.jpg?ts=1742217551187&w=1126"
+        },
+        {
+            "id": 3,
+            "name": "VESTIDO MIDI ASIMÉTRICO",
+            "category": "Vestidos",
+            "price": 99990.00,
+            "stock": 15,
+            "description": "Vestido de midi de escote asimétrico con tirantes finos. Cierre lateral con cremallera oculta en costura.",
+            "image_url": "https://static.zara.net/assets/public/a450/e90b/7dc14b5d8455/894c10c1cbfc/07746599800-e1/07746599800-e1.jpg?ts=1742217602024&w=750"
+        },
+        {
+            "id": 4,
+            "name": "PANTALÓN ANCHO PINZAS",
+            "category": "Pantalones",
+            "price": 99990.00,
+            "stock": 5,
+            "description": "Pantalón de tiro alto con pinzas delanteras. Bolsillos laterales y falso bolsillo con solapa. Pernera ancha. Cierre frontal con cremallera, botón interior y gancho.",
+            "image_url": "https://static.zara.net/assets/public/b4db/6033/818c4f5d8576/f44abb47baf3/01608234485-e1/01608234485-e1.jpg?ts=1727427147145&w=750"
+        },
+        {
+            "id": 5,
+            "name": "PANTALÓN ESPIGA RAYAS",
+            "category": "Pantalones",
+            "price": 99990.00,
+            "stock": 7,
+            "description": "Pantalón de tiro alto con pinzas delanteras. Bolsillos frontales y falsos bolsillos de vivo en espalda. Pernera ancha. Cierre frontal con cremallera, botón interior y gancho.",
+            "image_url": "https://static.zara.net/assets/public/f024/367b/5a624ca6852b/906842f59576/08741026806-e1/08741026806-e1.jpg?ts=1741173732938&w=750"
         }
     ]
 }
