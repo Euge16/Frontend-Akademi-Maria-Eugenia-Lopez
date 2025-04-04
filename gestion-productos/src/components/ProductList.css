@@ -1,4 +1,4 @@
-/* ProductList.css - Versión corregida */
+
 .product-list-container {
     max-width: 800px;
     margin: 0 auto;
@@ -73,11 +73,40 @@
   font-size: 0.9em;
 }
 
-.product-list-detail-link {
-  padding: 6px 12px;
-  background-color: #3498db;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 0.9em;
+.price-sort-section {
+  margin-bottom: 20px;
+}
+
+.price-sort {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+  width: 200px;
+}
+
+.price-sort:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.name-sort-section {
+  margin-bottom: 20px;
+}
+
+.name-sort {
+  padding: 8px 3px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+  width: 200px;
+}
+
+.name-sort:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
