@@ -4,6 +4,7 @@ import './App.css';
 import ProductList from './ProductList';
 import ProductDetail from './ProductDetail';
 import ProductEdit from './ProductEdit';
+import ProductCreate from './ProductCreate';
 // Prueba para mostrar mis productos
 /* function App() {
   const [products, setProducts] = useState([]);
@@ -34,8 +35,9 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ProductList />}/>
-          <Route path="/products/:id" element={<ProductDetail />} />
-          <Route path="/products/:id/edit" element={<ProductEdit />} />
+          <Route path="/products/:id" element={<ProductDetail />}/>
+          <Route path="/products/:id/edit" element={<ProductEdit />}/>
+          <Route path="/add-product" element={<ProductCreate/>}/>
         </Routes>
       </BrowserRouter>
     </div>

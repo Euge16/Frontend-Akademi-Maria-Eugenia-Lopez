@@ -20,7 +20,8 @@ const productReducer = (state = INITIAL_STATE, action) => {
         return {
           ...state,
           products: action.payload
-        };
+        }; 
+      
       case UPDATE_PRODUCT:
         return {
           ...state,

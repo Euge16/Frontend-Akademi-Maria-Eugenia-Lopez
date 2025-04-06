@@ -110,3 +110,20 @@
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+
+
+.add-product-button {
+  background-color: lightcoral;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.add-product-button:hover {
+  background-color: palevioletred;
+}

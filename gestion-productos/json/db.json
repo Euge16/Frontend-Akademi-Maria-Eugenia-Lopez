@@ -3,8 +3,8 @@
     {
       "name": "ABRIGO CRUZADO MEZCLA LANA",
       "category": "Abrigos",
-      "price": "490000.00",
-      "stock": "5",
+      "price": "490500.00",
+      "stock": "10",
       "description": "Abrigo entallado confeccionado en hilatura con mezcla de lana. Cuello solapa de muescas y manga larga acabada en abertura y botones. Bolsillos con solapa en delantero. Forro interior. Cierre frontal cruzado con botones.",
       "image_url": "https://static.zara.net/assets/public/ff62/ea80/47d946e49642/872dfb77e44e/02091724621-000-e1/02091724621-000-e1.jpg?ts=1741780970901&w=750",
       "id": "1"
@@ -44,6 +44,24 @@
       "stock": 7,
       "description": "Pantalón de tiro alto con pinzas delanteras. Bolsillos frontales y falsos bolsillos de vivo en espalda. Pernera ancha. Cierre frontal con cremallera, botón interior y gancho.",
       "image_url": "https://static.zara.net/assets/public/f024/367b/5a624ca6852b/906842f59576/08741026806-e1/08741026806-e1.jpg?ts=1741173732938&w=750"
+    },
+    {
+      "id": "db52",
+      "name": "BLAZER PATA DE GALLO",
+      "price": "215990.00",
+      "stock": "4",
+      "category": "Blazer",
+      "description": "Blazer de cuello solapa y manga larga. Bolsillo de vivo en pecho y con solapa en delantero. Bajo con abertura en espalda. Cierre frontal con botones.",
+      "image_url": "https://static.zara.net/assets/public/18ed/e17c/a1544abe9b2b/1939deaa9fca/07489084087-e1/07489084087-e1.jpg?ts=1743431372064&w=750"
+    },
+    {
+      "id": "3dd5",
+      "name": "Prueba",
+      "price": "18",
+      "stock": "1",
+      "category": "Chaleco",
+      "description": "dsdsdsdsfftrw",
+      "image_url": "mmm"
     }
   ]
 }
