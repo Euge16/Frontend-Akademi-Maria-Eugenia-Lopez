@@ -4,19 +4,21 @@ import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+
 const ProductDetail = ({ products }) => {
   const { id } = useParams(); 
-  console.log(id);
+   
   const product = products.find(p => p.id.toString() === id.toString());
-  console.log("Product:", product);
-  
+
   if (!product) {
     return <p>Producto no encontrado</p>;
   }
 
   return (
     <div className="product-detail-container">
+      
       <div className="product-detail-card">
+      
         <h1 className="product-title">{product.name}</h1>
         <div className="product-image-container">
           <img
@@ -27,11 +29,9 @@ const ProductDetail = ({ products }) => {
         </div>
         
         <div className="product-info-container">
-          
-            <Link to="/" className="back-button">
-                  Editar
-            </Link>
-          
+          <Link to={`/products/${id}/edit`} className="edit-button">
+            Editar
+          </Link> 
           <div className="price-section">
             <span className="product-price">${product.price?.toLocaleString('es-AR')}</span> 
           </div>
@@ -42,17 +42,16 @@ const ProductDetail = ({ products }) => {
           <div className="product-description">
             <h3>Descripción</h3>
             <p>{product.description || 'Este producto no tiene descripción.'}</p>
-          </div>
-
-          
+          </div>  
         </div>
+      
       </div>
     </div>
   );
 };
 
 const mapStateToProps = state => ({
-  products: state.products?.products || []
+  products: state.products.products 
 });
 
 export default connect(mapStateToProps)(ProductDetail);
