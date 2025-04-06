@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import ProductList from './ProductList';
 import ProductDetail from './ProductDetail';
+import ProductEdit from './ProductEdit';
 // Prueba para mostrar mis productos
 /* function App() {
   const [products, setProducts] = useState([]);
@@ -34,6 +35,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<ProductList />}/>
           <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/products/:id/edit" element={<ProductEdit />} />
         </Routes>
       </BrowserRouter>
     </div>

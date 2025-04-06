@@ -141,7 +141,7 @@ class ProductList extends React.Component {
 }
   
 const mapStateToProps = state => ({
-    products: state.products.products || []
+    products: state.products.products
 });
 
 export default connect(mapStateToProps, { fetchProducts })(ProductList);
