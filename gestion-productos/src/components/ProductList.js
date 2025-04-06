@@ -1,7 +1,7 @@
 import './ProductList.css';
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchProducts } from "../actions";
+import { fetchProducts, deleteProduct} from "../actions";
 import { Link } from 'react-router-dom';
 
 
@@ -10,8 +10,7 @@ class ProductList extends React.Component {
   state = {
     selectedCategory: 'all',
     sortByPrice: 'all',
-    sortByName: 'all'
-    
+    sortByName: 'all',
   };
 
   componentDidMount() {
@@ -61,7 +60,18 @@ class ProductList extends React.Component {
     return filteredProducts;
   }
 
+  handleDelete (id)  {
+    const confirmar = window.confirm('¿Seguro querés eliminar este producto?');
+    if (!confirmar) return;
+  
+    this.props.deleteProduct(id);
+  };
 
+  changePage (newPage) {
+    this.setState({ currentPage: newPage }, () => {
+      this.props.fetchProducts(this.state.currentPage, this.state.productsPerPage);
+    });
+  };
 
   render() {
     
@@ -73,7 +83,9 @@ class ProductList extends React.Component {
     return (
       <div className="product-list-container">
         <h2>Listado de Productos</h2>
-        
+        <Link to="/add-product" className="add-product-button">
+          Agregar Producto
+        </Link>
         <div className="filter-section">
           {/* <label>Filtrar por categoría: </label> */}
           <select value={this.state.selectedCategory} onChange={this.categoryChange} className="category-filter">
@@ -128,20 +140,21 @@ class ProductList extends React.Component {
                   <button>Detalle</button>
                 </Link>
                 <Link>
-                  <button>Eliminar</button>
+                <button onClick={() => this.handleDelete(product.id)}>Eliminar</button>
                 </Link> 
                 
               </div>
             </div>
           ))}
         </div>
+        
       </div>
     );
   }
 }
   
 const mapStateToProps = state => ({
-    products: state.products.products
+    products: state.products.products || []
 });
 
-export default connect(mapStateToProps, { fetchProducts })(ProductList);
+export default connect(mapStateToProps, { fetchProducts, deleteProduct })(ProductList);

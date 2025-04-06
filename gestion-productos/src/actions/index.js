@@ -10,12 +10,14 @@ export const addProduct = (product) => async dispatch => {
 };
 
 export const deleteProduct = (id) => async dispatch => {
-  await api.delete(`/product/${id}`);
+  await api.delete(`/products/${id}`);
   dispatch({
     type: DELETE_PRODUCT,
     payload:{id}
   });
 };
+
+
 
 export const fetchProducts = () => async dispatch => {
   const response = await api.get('/products');
@@ -33,4 +35,4 @@ export const updateProduct = (id, product) => async dispatch => {
     payload: response.data
   });
 
-}
+};

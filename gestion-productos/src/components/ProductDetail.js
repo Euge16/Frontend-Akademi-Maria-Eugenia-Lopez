@@ -51,7 +51,7 @@ const ProductDetail = ({ products }) => {
 };
 
 const mapStateToProps = state => ({
-  products: state.products.products 
+  products: state.products.products || []
 });
 
 export default connect(mapStateToProps)(ProductDetail);
