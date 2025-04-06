@@ -2,6 +2,8 @@ import './ProductList.css';
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchProducts } from "../actions";
+import { Link } from 'react-router-dom';
+
 
 
 class ProductList extends React.Component {
@@ -28,7 +30,7 @@ class ProductList extends React.Component {
     this.setState({sortByName: e.target.value});
   }
 
-  
+ 
 
   getFilteredProducts() {
     const { selectedCategory } = this.state;
@@ -62,7 +64,7 @@ class ProductList extends React.Component {
 
 
   render() {
-   
+    
     const products = this.props.products || [];
     const filteredProducts = this.getFilteredProducts();
     const sortedProducts = this.getSortedProducts(filteredProducts);
@@ -122,6 +124,12 @@ class ProductList extends React.Component {
               </div>
               
               <div className="product-list-actions">
+                <Link to={`/products/${product.id}`}>
+                  <button>Detalle</button>
+                </Link>
+                <Link>
+                  <button>Eliminar</button>
+                </Link> 
                 
               </div>
             </div>
