@@ -1,6 +1,8 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import ProductList from './ProductList';
+import ProductDetail from './ProductDetail';
 // Prueba para mostrar mis productos
 /* function App() {
   const [products, setProducts] = useState([]);
@@ -28,7 +30,12 @@ import ProductList from './ProductList';
 const App = () => {
   return (
     <div className='app-container'>
-      <ProductList />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ProductList />}/>
+          <Route path="/products/:id" element={<ProductDetail />} />
+        </Routes>
+      </BrowserRouter>
     </div>
     
   );

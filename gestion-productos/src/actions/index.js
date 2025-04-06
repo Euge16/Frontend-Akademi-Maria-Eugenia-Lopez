@@ -27,7 +27,7 @@ export const fetchProducts = () => async dispatch => {
 };
 
 export const updateProduct = (id, product) => async dispatch => {
-  const response = await api.put(`/product/${id}`, product);
+  const response = await api.put(`/products/${id}`, product);
   dispatch({
     type: UPDATE_PRODUCT,
     payload: response.data
