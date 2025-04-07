@@ -5,6 +5,7 @@ import ProductList from './ProductList';
 import ProductDetail from './ProductDetail';
 import ProductEdit from './ProductEdit';
 import ProductCreate from './ProductCreate';
+import Footer from './Footer';
 // Prueba para mostrar mis productos
 /* function App() {
   const [products, setProducts] = useState([]);
@@ -31,6 +32,7 @@ import ProductCreate from './ProductCreate';
 
 const App = () => {
   return (
+    
     <div className='app-container'>
       <BrowserRouter>
         <Routes>
@@ -40,6 +42,7 @@ const App = () => {
           <Route path="/add-product" element={<ProductCreate/>}/>
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
     
   );

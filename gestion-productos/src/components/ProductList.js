@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchProducts, deleteProduct} from "../actions";
 import { Link } from 'react-router-dom';
-
+import Pagination from './Pagination';
 
 
 class ProductList extends React.Component {
@@ -11,6 +11,8 @@ class ProductList extends React.Component {
     selectedCategory: 'all',
     sortByPrice: 'all',
     sortByName: 'all',
+    currentPage: 1, 
+    productsPerPage: 5 
   };
 
   componentDidMount() {
@@ -29,6 +31,9 @@ class ProductList extends React.Component {
     this.setState({sortByName: e.target.value});
   }
 
+  changePage = (page) => {
+    this.setState({ currentPage: page });
+  };
  
 
   getFilteredProducts() {
@@ -67,56 +72,64 @@ class ProductList extends React.Component {
     this.props.deleteProduct(id);
   };
 
-  changePage (newPage) {
-    this.setState({ currentPage: newPage }, () => {
-      this.props.fetchProducts(this.state.currentPage, this.state.productsPerPage);
-    });
-  };
+  
 
   render() {
     
     const products = this.props.products || [];
     const filteredProducts = this.getFilteredProducts();
     const sortedProducts = this.getSortedProducts(filteredProducts);
+    
     const categories = ['all', ...new Set(products.map(product => product?.category))];
+   
+    const { currentPage, productsPerPage } = this.state;
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = sortedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+    
     
     return (
       <div className="product-list-container">
-        <h2>Listado de Productos</h2>
-        <Link to="/add-product" className="add-product-button">
-          Agregar Producto
-        </Link>
-        <div className="filter-section">
-          {/* <label>Filtrar por categoría: </label> */}
-          <select value={this.state.selectedCategory} onChange={this.categoryChange} className="category-filter">
-            {categories.map(category => (
-              <option key={category} value={category}>
-                {category === 'all' ? 'Todas las categorías' : category}
-              </option>
-            ))}
-          </select>
+        <div className="header">
+          <h1 className="main-title">Akademi Femme Edition</h1>
+          <Link to="/add-product" className="add-product-button">
+            Agregar Producto
+          </Link> 
         </div>
+        
+        <div className='filter-container'>
+          <div className="filter-section">
+            {/* <label>Filtrar por categoría: </label> */}
+            <select value={this.state.selectedCategory} onChange={this.categoryChange} className="category-filter">
+              {categories.map(category => (
+                <option key={category} value={category}>
+                  {category === 'all' ? 'Todas las categorías' : category}
+                </option>
+              ))}
+            </select>
+          </div>
 
-        <div className="price-sort-section">
-          {/* <label>Ordenar por precio: </label> */}
-          <select value={this.state.sortByPrice} onChange={this.priceChange} className="price-sort">
-            <option value="all">Todos los precios</option>
-            <option value="asc">Menor a mayor</option>
-            <option value="desc">Mayor a menor</option>
-          </select>
-        </div>
+          <div className="price-sort-section">
+            {/* <label>Ordenar por precio: </label> */}
+            <select value={this.state.sortByPrice} onChange={this.priceChange} className="price-sort">
+              <option value="all">Todos los precios</option>
+              <option value="asc">Menor a mayor</option>
+              <option value="desc">Mayor a menor</option>
+            </select>
+          </div>
 
-        <div className="name-sort-section">
-          {/* <label>Ordenar por nombre: </label> */}
-          <select value={this.state.sortByName} onChange={this.nameChange} className="name-sort">
-            <option value="all">Sin ordenar por nombre</option>
-            <option value="asc">A-Z</option>
-            <option value="desc">Z-A</option>
-          </select>
+          <div className="name-sort-section">
+            {/* <label>Ordenar por nombre: </label> */}
+            <select value={this.state.sortByName} onChange={this.nameChange} className="name-sort">
+              <option value="all">Orden predeterminado</option>
+              <option value="asc">A-Z</option>
+              <option value="desc">Z-A</option>
+            </select>
+          </div>
         </div>
 
         <div className="product-list-items">
-          {sortedProducts.map(product => (
+          {currentProducts.map(product => (
             <div key={product.id} className="product-list-item">
               {product.image_url && (
                 <img 
@@ -146,6 +159,14 @@ class ProductList extends React.Component {
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="pagination-container">
+          <Pagination
+            currentPage={this.state.currentPage}
+            totalPages={Math.ceil(sortedProducts.length / this.state.productsPerPage)}
+            onPageChange={(page) => this.changePage(page)}
+          />
         </div>
         
       </div>
