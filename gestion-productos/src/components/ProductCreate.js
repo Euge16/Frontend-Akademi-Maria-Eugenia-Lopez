@@ -24,6 +24,11 @@ const ProductCreate = () => {
 
   const handleChange = (e) => {
     const {name, value} = e.target;
+    let parsedValue = value;
+
+    if (name === "price" || name === "stock") {
+      parsedValue = value === '' ? '' : Number(value);
+    }
     if (name === "price"){
         if(Number(value) < 0){
             alert("El precio debe ser mayor a 0 (cero)");
@@ -36,14 +41,22 @@ const ProductCreate = () => {
             return;
         }
     }
+
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: parsedValue
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if(!formData.name.trim() || !formData.category.trim() || !formData.price.toString().trim() || !formData.stock.toString().trim() || !formData.description.trim() || !formData.image_url.trim()) {
+      alert('Todos los campos tienen que estar completos');
+      return;
+    }
+
     dispatch(addProduct(formData));
     setSuccessMessage(true);
     setTimeout(() => {

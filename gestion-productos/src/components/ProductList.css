@@ -1,8 +1,35 @@
-
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+.main-title {
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+}
 .product-list-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+}
+.filter-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  max-width: 800px; 
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  gap: 1rem; 
+}
+
+.filter-container select {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 1rem;
 }
 
 .filter-section {
@@ -17,6 +44,7 @@
   background-color: #fff;
   outline: none;
   width: 200px;
+  margin-left: 0;
 }
 
 .category-filter:focus {
@@ -121,9 +149,16 @@
   text-decoration: none;
   border: 1px solid transparent;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .add-product-button:hover {
   background-color: palevioletred;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px; 
+  margin-bottom: 20px;
 }

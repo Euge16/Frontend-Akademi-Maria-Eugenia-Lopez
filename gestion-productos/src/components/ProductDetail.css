@@ -6,7 +6,7 @@ body {
   
 .product-detail-container {
   display: flex;
-  justify-content: ceter;
+  justify-content: center;
   padding: 2rem;
   min-height: 100vh;
   background-color: #f3f4f6;
@@ -14,7 +14,7 @@ body {
   
 .product-detail-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 1100px;
   width: 100%;
   background-color: #fff;
@@ -46,7 +46,7 @@ img {
 }
 
 img:hover {
-  transform: scale(2.3);
+  transform: scale(1.7);
 }
 
 .product-info-container {
@@ -58,10 +58,13 @@ img:hover {
 }
 
 .product-title {
+  font-family: 'Caveat', cursive;
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #1a1a1a;
+  text-align: center;
+  padding: 1rem 2rem;
 }
 
 .price-section {

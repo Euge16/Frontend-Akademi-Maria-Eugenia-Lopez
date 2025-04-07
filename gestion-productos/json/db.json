@@ -3,15 +3,15 @@
     {
       "name": "ABRIGO CRUZADO MEZCLA LANA",
       "category": "Abrigos",
-      "price": "490500.00",
-      "stock": "10",
+      "price": 449990,
+      "stock": 0,
       "description": "Abrigo entallado confeccionado en hilatura con mezcla de lana. Cuello solapa de muescas y manga larga acabada en abertura y botones. Bolsillos con solapa en delantero. Forro interior. Cierre frontal cruzado con botones.",
       "image_url": "https://static.zara.net/assets/public/ff62/ea80/47d946e49642/872dfb77e44e/02091724621-000-e1/02091724621-000-e1.jpg?ts=1741780970901&w=750",
       "id": "1"
     },
     {
       "name": "CHALECO BOTONES",
-      "category": "Chaleco",
+      "category": "Blazer",
       "price": 99990,
       "stock": "18",
       "description": "Chaleco de escote pico y manga sisa. Cierre frontal con botones.",
@@ -46,22 +46,58 @@
       "image_url": "https://static.zara.net/assets/public/f024/367b/5a624ca6852b/906842f59576/08741026806-e1/08741026806-e1.jpg?ts=1741173732938&w=750"
     },
     {
+      "id": "6",
+      "name": "CAMISA CROP POPELÍN ZW COLLECTION",
+      "category": "Camisas",
+      "price": 89990,
+      "stock": 10,
+      "description": "Camisa confeccionada en hilatura de algodón 100%. Cuello solapa y manga larga acabada en puño con pliegue. Bolsillos de plastrón en delantero. Cierre frontal con botones.",
+      "image_url": "https://static.zara.net/assets/public/4076/0305/e46b4f9b84cb/cb56c1ad511d/04786283505-e1/04786283505-e1.jpg?ts=1727360802735&w=750"
+    },
+    {
+      "id": "7",
+      "name": "CAMISETA ESCOTE PICO",
+      "category": "Camisetas",
+      "price": 42990,
+      "stock": 22,
+      "description": "Camiseta confeccionada en hilatura con mezcla de algodón. Escote pico y manga corta.",
+      "image_url": "https://static.zara.net/assets/public/a05e/cb96/91e64997b2e4/c3cba9f0b0b1/05644170800-e1/05644170800-e1.jpg?ts=1738248158304&w=750"
+    },
+    {
+      "id": "8",
+      "name": "CAMISETA RIB",
+      "category": "Camisetas",
+      "price": 25990,
+      "stock": 13,
+      "description": "Camiseta de cuello redondo y manga corta.",
+      "image_url": "https://static.zara.net/assets/public/3469/043e/20a84c649a8d/7134712d8d14/04424300250-e1/04424300250-e1.jpg?ts=1692631268335&w=750"
+    },
+    {
+      "id": "9",
+      "name": "TRENCH ENCERADO CUELLO PANA",
+      "category": "Abrigos",
+      "price": 245990,
+      "stock": 6,
+      "description": "Trench de cuello solapa combinado en pana y manga larga. Detalle de acabados con trabillas y pinza en espalda. Bolsillos delanteros con solapa y botón a presión. Tejido encerado efecto lavado. Cierre frontal con botones a presión.",
+      "image_url": "https://static.zara.net/assets/public/4238/11bb/5a614d0fa456/2faba62c7b2b/04341882502-e1/04341882502-e1.jpg?ts=1741335292173&w=750"
+    },
+    {
+      "id": "10",
+      "name": "VESTIDO CUADROS SKATER",
+      "category": "Vestidos",
+      "price": 89990,
+      "stock": 4,
+      "description": "Vestido corto de escote corazón y manga larga. Bajo acabado en vuelo.",
+      "image_url": "https://static.zara.net/assets/public/1048/ef91/dffd4fcab0ba/dcb706e10f61/00085157093-e1/00085157093-e1.jpg?ts=1736785728375&w=750"
+    },
+    {
       "id": "db52",
       "name": "BLAZER PATA DE GALLO",
-      "price": "215990.00",
+      "price": 215990,
       "stock": "4",
       "category": "Blazer",
       "description": "Blazer de cuello solapa y manga larga. Bolsillo de vivo en pecho y con solapa en delantero. Bajo con abertura en espalda. Cierre frontal con botones.",
       "image_url": "https://static.zara.net/assets/public/18ed/e17c/a1544abe9b2b/1939deaa9fca/07489084087-e1/07489084087-e1.jpg?ts=1743431372064&w=750"
-    },
-    {
-      "id": "3dd5",
-      "name": "Prueba",
-      "price": "18",
-      "stock": "1",
-      "category": "Chaleco",
-      "description": "dsdsdsdsfftrw",
-      "image_url": "mmm"
     }
   ]
 }

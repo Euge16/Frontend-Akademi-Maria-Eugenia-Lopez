@@ -1,0 +1,24 @@
+.footer {
+    background: lightcoral;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
